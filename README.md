@@ -127,13 +127,12 @@ Open **PowerToys Settings → PowerToys Run → QuickMaths** to configure the pl
 
 By default the **Program** plugin uses `.` as its direct activation command. This conflicts with leading-decimal queries like `.5+2` — PowerToys Run intercepts the `.` and routes the input to the Program plugin before QuickMaths can see it.
 
-**It is strongly recommended to change the Program plugin's activation command to something else (e.g. `/`).**
+**It is recommended to change the Program plugin's activation command to something else (e.g. `/`).**
 
-Open **PowerToys Settings → PowerToys Run → Program** and set *Direct activation command* to `/`:
+Open **PowerToys Settings → PowerToys Run → Program** and set *Direct activation command* to `your prefered keyword`:
 
 ![Program plugin activation command changed to /](docs/program_activation.png)
 
-Once changed, expressions like `(.5+6)*12` evaluate correctly without needing to wrap the leading decimal in parentheses first.
 
 ---
 
