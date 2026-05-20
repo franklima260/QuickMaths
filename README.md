@@ -88,7 +88,52 @@ The free tier allows up to 2,000 API calls per month.
 | Keyword | Type `=` then your expression | `= integrate x^2` |
 | Global | Just type anywhere in PowerToys Run | `sin(45) + cos(0)` |
 
-**Tip:** If you only want the plugin to respond when you explicitly type `=`, disable *Use global results* in the plugin settings.
+**Tip:** If you only want the plugin to respond when you explicitly type `=`, disable *Include in global result* in the plugin settings.
+
+### Examples
+
+**Simple arithmetic**
+
+![Simple arithmetic: (.5+6)*12 = 78](docs/simple_math.png)
+
+**Unit conversion**
+
+![Unit conversion: 2in to nm](docs/Unit_Conversion.png)
+
+**Natural language math**
+
+![Natural language: twelve divided by 5 = 2.4](docs/Text_math.png)
+
+**Calculus**
+
+![Integration: integrate(e^x,0,1.0) = 1.71828](docs/Integrate.png)
+
+---
+
+## Configuration
+
+Open **PowerToys Settings → PowerToys Run → QuickMaths** to configure the plugin.
+
+![QuickMaths settings panel](docs/Powertoys_Settings.png)
+
+| Setting | Description |
+|---|---|
+| **Direct activation command** | Keyword that forces a Wolfram lookup regardless of input (`=` by default). |
+| **Include in global result** | When enabled, QuickMaths runs on every query and uses the math pre-filter to decide whether to call Wolfram. Disable this to only trigger via the `=` keyword. |
+| **Global sort order score modifier** | Increase this to make QuickMaths results appear higher in the global result list. |
+| **Wolfram Alpha App ID** | Your Short Answers API key from [developer.wolframalpha.com](https://developer.wolframalpha.com). |
+
+### Recommended: change the Program plugin's activation command
+
+By default the **Program** plugin uses `.` as its direct activation command. This conflicts with leading-decimal queries like `.5+2` — PowerToys Run intercepts the `.` and routes the input to the Program plugin before QuickMaths can see it.
+
+**It is strongly recommended to change the Program plugin's activation command to something else (e.g. `/`).**
+
+Open **PowerToys Settings → PowerToys Run → Program** and set *Direct activation command* to `/`:
+
+![Program plugin activation command changed to /](docs/program_activation.png)
+
+Once changed, expressions like `(.5+6)*12` evaluate correctly without needing to wrap the leading decimal in parentheses first.
 
 ---
 
