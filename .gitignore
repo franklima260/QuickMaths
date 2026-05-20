@@ -1,0 +1,22 @@
+# Claude Code
+.claude/
+implementation_plan.md
+task.md
+
+# Build output
+bin/
+obj/
+
+# Secrets
+secrets.json
+
+# Visual Studio
+.vs/
+*.user
+
+# Rider
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini

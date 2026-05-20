@@ -1,0 +1,14 @@
+{
+  "ID": "F88A212A45C34BB6B3A9A7A7B09F6D1D",
+  "ActionKeyword": "=",
+  "IsGlobal": true,
+  "Name": "QuickMaths",
+  "Author": "Community",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "https://github.com/community/PowerToysRun-QuickMaths",
+  "ExecuteFileName": "Community.PowerToys.Run.Plugin.QuickMaths.dll",
+  "IcoPathDark": "Images\\QuickMaths.png",
+  "IcoPathLight": "Images\\QuickMaths.png",
+  "DynamicLoading": false
+}
